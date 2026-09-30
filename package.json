@@ -1,0 +1,23 @@
+{
+  "name": "pac-mano",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:browser": "node scripts/browser.mjs test --workers=1",
+    "browsers:install": "node scripts/browser.mjs install chromium firefox webkit",
+    "playtest": "vite-node scripts/playtest.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "typescript": "5.9.3",
+    "vite": "6.4.1",
+    "vitest": "3.2.4",
+    "vite-node": "3.2.4"
+  }
+}
